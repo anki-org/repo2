@@ -26,5 +26,5 @@ jobs:
         git checkout -b testuser
         git add --all
         # Only commit and push if we have changes
-        git diff --quiet && git diff --staged --quiet || (git commit -m "${COMMIT_MSG}"; git push origin testuser)
+        git diff  && git diff --staged  || (git commit -m "${COMMIT_MSG}"; git push origin testuser)
 
