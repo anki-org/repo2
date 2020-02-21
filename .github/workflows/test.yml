@@ -25,9 +25,6 @@ jobs:
         # Checkout the branch so we can push back to it
         #git checkout -b testuser
         git add --all
-        # Only commit and push if we have changes
-        git diff  
-        git diff --staged
-        git commit -m "${COMMIT_MSG}"
+        git commit --allow-empty
         git push origin testuser
 
