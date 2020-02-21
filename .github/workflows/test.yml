@@ -26,5 +26,6 @@ jobs:
         #git checkout -b testuser
         git add --all
         git commit --allow-empty -m "${COMMIT_MSG}"
+        git show-ref
         git push origin testuser
 
