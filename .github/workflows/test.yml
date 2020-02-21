@@ -18,7 +18,9 @@ jobs:
         echo Add other actions to build,
         pwd
         ls
-        echo test, and deploy your project.        
+        echo test, and deploy your project. 
+        git config --local user.email "ankit85jsin@yahoo.co.in"
+        git config --local user.name "ankit85jsin"       
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/anki-org/repo2.git
         # Checkout the branch so we can push back to it
         git checkout -b testuser
