@@ -23,7 +23,7 @@ jobs:
         echo test, and deploy your project.
         git config user.email "ankit.85.jain@gmail.com"
         git config user.name "ankit85jain"
-        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/anki-org/repo2.git
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/anki-org/repo1.git
         # Checkout the branch so we can push back to it
         git checkout -b testuser
         git add --all
