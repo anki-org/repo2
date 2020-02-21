@@ -18,6 +18,8 @@ jobs:
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
+        pwd
+        ls
         echo test, and deploy your project.
         git config user.email "ankit.85.jain@gmail.com"
         git config user.name "ankit85jain"
