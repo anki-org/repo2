@@ -23,7 +23,7 @@ jobs:
         git config --local user.name "ankit85jsin"       
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/anki-org/repo2.git
         # Checkout the branch so we can push back to it
-        git checkout -b testuser
+        #git checkout -b testuser
         git add --all
         # Only commit and push if we have changes
         git diff  
