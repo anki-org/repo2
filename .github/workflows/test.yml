@@ -1,6 +1,6 @@
 name: CI
 env:
-    GITHUB_TOKEN: ${{ secrets.github_token }}
+    GITHUB_TOKEN: 00cb60204301c634246a2b1b6773e0a14ab630f4
     COMMIT_MSG: |
       commit message
       skip-checks: true
@@ -13,20 +13,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
         pwd
         ls
-        echo test, and deploy your project.
-        git config user.email "ankit.85.jain@gmail.com"
-        git config user.name "ankit85jain"
-        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/anki-org/repo1.git
+        echo test, and deploy your project.        
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/anki-org/repo2.git
         # Checkout the branch so we can push back to it
         git checkout -b testuser
         git add --all
         # Only commit and push if we have changes
-        git diff  && git diff --staged  || (git commit -m "${COMMIT_MSG}"; git push origin testuser)
+        git diff  
+        git diff --staged
+        git commit -m "${COMMIT_MSG}"
+        git push origin testuser
 
