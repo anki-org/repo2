@@ -25,6 +25,6 @@ jobs:
         # Checkout the branch so we can push back to it
         #git checkout -b testuser
         git add --all
-        git commit --allow-empty
+        git commit --allow-empty -m "${COMMIT_MSG}"
         git push origin testuser
 
