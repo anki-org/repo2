@@ -1,4 +1,4 @@
-echo "Hello pushong code "
+echo "Hello pushiing code "
 git add --all
 git config --local user.email "ankit85jsin@yahoo.co.in"
 git config --local user.name "ankit85jsin"
