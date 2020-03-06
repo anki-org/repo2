@@ -1,3 +1,102 @@
 hello file
 ghghhg28ede5d9c3d270efc1574979046df25052ae621d
 test push
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1
+$ git clone https://github.com/anki-org/repo1.git
+Cloning into 'repo1'...
+remote: Enumerating objects: 108, done.
+remote: Counting objects: 100% (108/108), done.
+remote: Compressing objects: 100% (67/67), done.
+remote: Total 108 (delta 22), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (108/108), 18.51 KiB | 217.00 KiB/s, done.
+Resolving deltas: 100% (22/22), done.
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1
+$ cd repo1/
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git remote set-url origin https://00cb60204301c634246a2b1b6773e0a14ab630f4:${GITHUB_TOKEN1}@github.com/anki-org/repo2.git
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git add .
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git commit -m "commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Ankit jan@DESKTOP-2GOBMGP.(none)')
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git config --local user.email "ankit85jsin@yahoo.co.in"
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$         git config --local user.name "ankit85jsin"
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git commit -m "commit"                                [master 7646b83] commit
+ 1 file changed, 1 insertion(+)
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git push origin master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/anki-org/repo2.git/'
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git remote set-url origin https://430705eefe808ae88ab86a8a85054c83261cceb0:${GITHUB_TOKEN1}@github.com/anki-org/repo2.git
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git push origin master                                warning: redirecting to https://github.com/anki-org/repo2.git/
+To https://github.com/anki-org/repo2.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://430705eefe808ae88ab86a8a85054c83261cceb0:@github.com/anki-org/repo2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git push --help
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
+$ git push -f origin master
+warning: redirecting to https://github.com/anki-org/repo2.git/
+Enumerating objects: 70, done.
+Counting objects: 100% (70/70), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (70/70), 11.70 KiB | 2.92 MiB/s, done.
+Total 70 (delta 15), reused 63 (delta 12)
+remote: Resolving deltas: 100% (15/15), done.
+To https://github.com/anki-org/repo2.git
+ + 4b9c60e...7646b83 master -> master (forced update)
+
+Ankit jan@DESKTOP-2GOBMGP MINGW64 ~/Downloads/repo1/repo1 (master)
