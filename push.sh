@@ -1,5 +1,5 @@
 echo "Hello pushong code "
-git add .
+git add --all
 git config --local user.email "ankit85jsin@yahoo.co.in"
 git config --local user.name "ankit85jsin"
 git commit -m "commit"
